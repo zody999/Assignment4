@@ -5,7 +5,7 @@ public class Restaurant {
 
 	
 	static Menu men = new Menu();
-
+	static Bill mybill = new Bill();
 
 	public static void main(String[] args) 
 	{
@@ -28,8 +28,11 @@ public class Restaurant {
 			int item = scan.nextInt();
 
 			}
-			else if (choice.equals("view"))
+			else if (choice.equals("paybill"))
 			{	// Do something
+				System.out.println("Enter amount you want to pay");
+				waiter.addTips(mybill.payBill(scan.nextInt()));
+				
 			}
 			else
 				System.out.println("Invalid input!");
