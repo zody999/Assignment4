@@ -20,15 +20,15 @@ public class Bill {
 	
 	public void viewBill()
 	{
-		int itemNum = 1;
+
 		for (int i = 0; i<orders.size();i++)
 		{
-			System.out.println("Item "+itemNum+": "+orders.get(i) +"         $" + prices.get(i));
+			System.out.println("Item "+": "+orders.get(i) +"         $" + prices.get(i));
 		}
 		
 		System.out.println();
 		System.out.println("Total Price: "+ totalPrice);
-		itemNum++;
+		
 		
 		
 	}
