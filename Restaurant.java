@@ -21,7 +21,7 @@ public class Restaurant {
 		
 		String choice = scan.next();
 
-		while (!choice.equals("no")&& mybill.totalPrice== 0)
+		while (!choice.equals("no"))
 			
 		{	if (choice.equals("yes"))
 			{	
@@ -49,10 +49,7 @@ public class Restaurant {
 
 		    men.displayMenu();
 			choice = scan.next();
-			if(choice.equals("no") && mybill.totalPrice != 0)
-			{
-				System.out.println("You need to pay your bill first!");
-			}
+		
 			
 		}
 
