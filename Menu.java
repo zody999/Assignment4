@@ -23,8 +23,9 @@ public class Menu {
 
 	public void displayMenu()
 	{
-		System.out.println("Would you like an item? (yes/no)");
-		System.out.println("Type VIEW to view bill.");
+		
+		
+		System.out.println("Type PAYBILL to pay for your bill.");
 
 		System.out.println(" ");
 		for (int i = 1; i<6; i++)
@@ -33,6 +34,8 @@ public class Menu {
 			System.out.println("  +"+prices[i-1]);
 		}
 		System.out.println(" "); 
+
+		System.out.println("Would you like an item? (yes/no):");
 
 
 	}

@@ -20,5 +20,10 @@ public class Waiter {
      {
     	 return tips;
      }
+     
+     public String getName()
+     {
+    	 return name;
+     }
 
 }

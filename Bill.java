@@ -8,7 +8,7 @@ public class Bill {
 	double totalPrice = 0;
 	ArrayList orders = new ArrayList();
 	ArrayList prices = new ArrayList();	
-	
+	double HST;
 
 	
 	public void addOrder(String order, double price)
@@ -37,6 +37,11 @@ public class Bill {
 	
 	public double payBill(double payment)
 	{	double tip = 0;
+		System.out.println("Total Item Price: "+totalPrice);
+		System.out.println("HST: "+ HST);
+		totalPrice = totalPrice + HST;
+		System.out.println("Total: "+totalPrice);
+	
 		if (payment < totalPrice)
 		{
 			Scanner scan = new Scanner(System.in);

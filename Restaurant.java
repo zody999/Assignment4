@@ -17,19 +17,29 @@ public class Restaurant {
 		
 
 		Scanner scan = new Scanner(System.in);
+		
+		
 		String choice = scan.next();
 
-		while (!choice.equals("no"))
+		while (!choice.equals("no")&& mybill.totalPrice== 0)
+			
 		{	if (choice.equals("yes"))
 			{	
-
-
 			System.out.println("Which item would you like?"); // Do something
 			int item = scan.nextInt();
 
+
+			mybill.addOrder(men.items[item-1], men.prices[item-1] );
+			int itemNum = item;
+			mybill.viewBill();
+			
+			
 			}
-			else if (choice.equals("paybill"))
+			else if (choice.equals("paybill") || choice.equals("PAYBILL"))
 			{	// Do something
+				
+				System.out.println("Total Item Price: "+mybill.totalPrice);
+				System.out.println("HST: "+ mybill.HST);
 				System.out.println("Enter amount you want to pay");
 				waiter.addTips(mybill.payBill(scan.nextInt()));
 				
@@ -39,10 +49,18 @@ public class Restaurant {
 
 		    men.displayMenu();
 			choice = scan.next();
+			if(choice.equals("no") && mybill.totalPrice != 0)
+			{
+				System.out.println("You need to pay your bill first!");
+			}
+			
 		}
 
 
-	
+		System.out.println();
+		System.out.println("Thankyou for dining with us!");
+		System.out.println();
+		System.out.println(waiter.getName()+" was tipped "+waiter.returnTips());
 		
 
 }}
