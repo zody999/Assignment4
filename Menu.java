@@ -24,12 +24,16 @@ public class Menu {
 	
 	public void displayMenu()
 	{
-		System.out.print("Browse the Menu!: ");
+		System.out.println("Would you like an item? (yes/no)");
+		System.out.println("Type VIEW to view bill.");
+		
+		System.out.println(" ");
 		for (int i = 1; i<6; i++)
 		{
-			System.out.println(i+": "+items[i-1]);
-			System.out.print("  -"+prices[i-1]);
+			System.out.print(i+": "+items[i-1]);
+			System.out.println("  +"+prices[i-1]);
 		}
+		System.out.println(" "); 
 		
 		
 	}
