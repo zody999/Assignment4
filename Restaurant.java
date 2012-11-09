@@ -38,8 +38,12 @@ public class Restaurant {
 			else if (choice.equals("paybill") || choice.equals("PAYBILL"))
 			{	// Do something
 				
+				double HST = mybill.totalPrice *0.12;
+				double totalPrice = mybill.totalPrice + HST;
+				
 				System.out.println("Total Item Price: "+mybill.totalPrice);
-				System.out.println("HST: "+ mybill.HST);
+				System.out.println("HST: "+ HST);
+				System.out.println("Total: "+ totalPrice);
 				System.out.println("Enter amount you want to pay");
 				waiter.addTips(mybill.payBill(scan.nextInt()));
 				

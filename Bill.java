@@ -36,7 +36,10 @@ public class Bill {
 	
 	
 	public double payBill(double payment)
-	{	double tip = 0;
+	{	
+		System.out.println("Enter amount you want to pay");
+		
+		double tip = 0;
 		HST = totalPrice *0.12;
 		System.out.println("Total Item Price: "+totalPrice);
 		System.out.println("HST: "+ HST);
