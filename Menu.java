@@ -20,11 +20,17 @@ public class Menu {
 		
 		
 	}
+
+			
 	
+	public double[] getprice()
+	{
+		return prices;
+	}
 	
 	public void displayMenu()
 	{
-		System.out.println("Would you like an item? (yes/no)");
+		
 		System.out.println("Type VIEW to view bill.");
 		
 		System.out.println(" ");
@@ -35,8 +41,9 @@ public class Menu {
 		}
 		System.out.println(" "); 
 		
-		
+		System.out.println("Would you like an item? (yes/no):");
 	}
+
 	
 	
 	
