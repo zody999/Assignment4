@@ -1,4 +1,4 @@
 Assignment4
 ===========
 
-yay
+This program sells food!
